@@ -17,7 +17,7 @@ def draw_boxes(image, annotations):
 
 # Function to load YOLO annotations
 def load_annotations(image_filename):
-    annotation_filename = os.path.join(r"C:\Users\hp\Documents\Python\Python_Beginner\Data_Science\ds-task3\mem", image_filename[:-4] + ".txt")
+    annotation_filename = os.path.join("C:\Users\hp\Documents\Python\Python_Beginner\Data_Science\ds-task3\mem", image_filename[:-4] + ".txt")
 
     with open(annotation_filename, "r") as f:
         lines = f.readlines()
@@ -48,7 +48,7 @@ def upload_image():
         return jsonify({'error': 'No selected file'})
 
     # Save uploaded image
-    image_path = "C:\Users\hp\Documents\Python\Python_Beginner\IBM Data Science\ds-task3\mem"
+    image_path = "C:\Users\hp\Documents\Python\Python_Beginner\Data_Science\ds-task3\mem"
     file.save(image_path)
 
     # Load image
